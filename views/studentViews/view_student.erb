@@ -1,0 +1,11 @@
+
+
+<% @readonly = true %>
+<%= erb :'studentViews/student_form' %>
+<br>
+<a class="button" href="/students/edit/<%= @student.id %>">Edit</a>
+<br>
+<form method="POST" action="/students/<%=@student.id%>"> 
+    <input type="hidden" name="_method" value="DELETE">
+    <input  class="button" type="submit" value="Delete">
+ </form>

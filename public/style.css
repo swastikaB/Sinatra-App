@@ -1,0 +1,102 @@
+h1 {
+    font-family: "Arial, Helvetica, sans-serif";
+    font-size: 50px;
+    padding-left: 50px;
+    color: crimson;
+}
+body {
+  color: darkcyan;
+  /*text-indent: 40px;*/
+}
+table #header{
+    padding-left: 30px;
+    padding-right: 30px;
+    /*text-align: center;*/
+}
+
+ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: lightblue;
+    overflow: hidden;
+  }
+  li.menu {
+    float: left;
+    text-indent: 40px;
+  }
+  li#loggedInName {
+    float: right;
+    padding: 8px;
+    color: crimson;
+    font-weight: 2px;
+  }
+  a {
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    color: blue;
+    font-weight: 2px;
+  }
+
+  table .body{
+       text-align: center;
+  }
+
+  .button {
+    background-color: #999999;
+    color: #FFFFFF !important;
+    cursor: pointer;
+   /* display: inline-block;*/
+    display: inherit;
+    font-weight: bold;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration:none;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+#errorMessage{
+  color: red;
+  justify-content: center;
+  display: flex;
+}
+
+table.infoTable td, th{
+  border-collapse: collapse;
+  /*width: 100%;*/
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+/*
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+*/
+table.infoTable tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+table.formTable td{
+  padding: 8px;
+}
+div.wrapper{
+  /*margin-left: 40px;
+  margin-right: 40px;*/
+  width: 800px;
+  margin: 0 auto;
+  
+}
+h2{
+  display: flex;
+  justify-content: flex-start;
+}
+div.variable{
+  
+  justify-content: flex-start;
+  display: grid;
+
+}

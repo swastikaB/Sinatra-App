@@ -1,0 +1,37 @@
+<table id="infoTable">
+    <tr>
+        <td>
+            <label for="name"> Name:</label>
+        </td>
+        <td>
+            <% if(@readonly) %>
+            <label> <%= @comment.name%> </label>
+            <% else %>
+            <input type="text" width="25" name="comment[name]" value="<%= @comment.name %>" maxlength="25" >
+            <% end %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="description"> Comment:</label>
+        </td>
+        <td>
+           <% if(@readonly) %>
+            <label> <%= @comment.description%> </label>
+            <% else %>
+            <input type="text" width="25" name="comment[description]" value="<%= @comment.description %>" maxlength="100">
+            <% end %>
+        </td>
+    </tr>
+    <tr>
+        <% if(@readonly) %>
+            <td>
+                <label> Posted on:</label>
+            </td>
+            <td>
+                <%datetime = @comment.created_at.strftime("%m/%d/%Y" + " at " + "%H:%M:%S") if @comment.created_at%>
+                <label> <%= datetime %></label>
+            </td>
+        <% end %>
+    </tr>
+</table>

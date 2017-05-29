@@ -1,0 +1,60 @@
+   
+<table id="infoTable" width="400px" align="center">
+    <tr>
+        <td>
+            <label for="firstName"> First Name:</label>
+        </td>
+        <td>
+            <% if(@readonly) %>
+            <label> <%= @student.first_name%> </label>
+            <% else %>
+            <input type="text" width="25" name="student[first_name]" value="<%= @student.first_name %>" maxlength="25" >
+            <% end %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="lastName"> Last Name:</label>
+        </td>
+        <td>
+           <% if(@readonly) %>
+            <label> <%= @student.last_name%> </label>
+            <% else %>
+            <input type="text" width="25" name="student[last_name]" value="<%= @student.last_name %>" maxlength="25">
+            <% end %>
+        </td>
+    </tr>
+        <tr>
+        <td>
+            <label for="dob">Date of Birth (mm/dd/yyyy):</label>
+        </td>
+        <td>
+            <% dobString = @student.dob.strftime("%m/%d/%Y") if @student.dob %>
+            <% if(@readonly) %>
+            <label> <%= dobString %> </label>
+            <% else %>
+            <input type="text" width="25" name="student[dob]" value="<%= dobString %>">
+            <% end %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="addr">Address:</label>
+        </td>
+        <td>
+            <% if(@readonly) %>
+            <label> <%= @student.address%> </label>
+            <% else %>
+            <input type="text" width="25" name="student[address]" value="<%= @student.address%>" maxlength="50">
+            <% end %>
+        </td>
+    </tr>
+    <!--
+    <tr colspan="2">
+        <td align="center">
+            <input type="submit" value="Submit">
+        </td>
+    </tr> -->
+</table>
+
+

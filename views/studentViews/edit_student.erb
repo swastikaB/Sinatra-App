@@ -1,0 +1,6 @@
+<form method="POST" action="/students/<%= @student.id %>">
+  <input type="hidden" name="_method" value="PUT" >
+    <% @readonly = false %>
+    <%= erb :'studentViews/student_form' %>
+    <input type="submit" value="Save Record" >
+</form>

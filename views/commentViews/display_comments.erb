@@ -1,0 +1,28 @@
+<%if(@comment.any?)%>
+    <table class="infoTable">
+        <th> Name </th>
+        <th> Comment</th>
+        <th></th>
+        <% @comment.each do |each_comment| %>
+
+            <tr>
+                <td> 
+                    <%= each_comment.name %>
+                </td>
+                <td>
+                    <%= each_comment.description %> 
+                </td> 
+                <td>
+                    <a class="button" href="/comments/<%= each_comment.id %>" title="view <%=each_comment.name%>'s comment"> View </a>
+                </td>
+            </tr>
+        <% end %>
+    </table>
+<% else %>
+    <h2>
+        There are no records. You need to create a record
+    </h2>
+<% end %>
+<br>
+    <a class="button" href="/comments/create" title="Write a new Comment"> New Comment </a>
+

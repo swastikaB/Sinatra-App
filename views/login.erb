@@ -1,0 +1,27 @@
+ 
+ <p id="errorMessage"> <%= settings.message if !settings.message.empty?%> </p>
+ <form method="POST" action="/login">   
+    <table class="formTable" width="400px" align="center">
+        <tr>
+            <td>
+                <label for="username">User Name: </label>
+            </td>
+            <td>
+                <input type="text" width="25" name="username" value="" maxlength="25">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="password"> Password:</label>
+            </td>
+            <td>
+                <input type="text" width="25" name="password" value="" maxlength="25">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input class="button" type="submit" value="Submit">
+            </td>
+        </tr>
+    </table>
+</form>

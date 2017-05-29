@@ -1,0 +1,22 @@
+
+<%if(@student.any?)%>
+    <table class="infoTable">
+        <th> Student Names</th>
+        <% @student.each do |each_student| %>
+
+            <tr>
+                <td>   
+                <a href="/students/<%= each_student.id %>" title="view <%=each_student.first_name%>'s record"><%=  each_student.first_name + " " + each_student.last_name%></a>
+                </td>
+            </tr>
+        <% end %>
+    </table>
+<% else %>
+    <h2>
+        There are no records. You need to create a record
+    </h2>
+<% end %>
+    <div>
+    <br>
+    <a class="button" href="/students/create" title="Create a new Student Record"> Create Record </a>
+    </div>

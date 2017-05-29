@@ -1,0 +1,57 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset='UTF-8'/>
+        <title>Sudent Information Center</title>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+    <body>
+        <div>
+            <table id="header">
+                <tr>
+                    <td rowspan= "3">
+                        <img src="/images/children_activity.jpg" alt="Student Information System" height="300px" >
+                    </td>
+
+                    <td>
+                        <h1> Student </h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1> Information </h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1> System </h1>
+                    </td>
+                </tr>
+            </table>
+        </div>
+       <div class="tab">
+           <ul class="menu">
+            <li class="menu"> <a href="/" title="Home">Home</a></li>
+            <li class="menu"> <a href="/about" title="About">About</a></li>
+            <li class="menu"> <a href="/contact" title="Contact">Contact</a></li>
+            <li class="menu"><a href="/students" title="Students">Students</a></li>
+            <li class="menu"><a href="/comments" title="Comments">Comments</a></li>
+            <li class="menu"><a href="/video" title="Video">Video</a></li>
+            <%if(settings.logged_in) %>
+                <li class="menu"><a href="/logout" title="Logout">Logout</a></li>
+                <li id="loggedInName">Welcome Swastika</li>
+            <% else %>
+                <li class="menu"><a href="/login" title="Login">Login</a></li>
+            <% end %>
+            
+            
+           </ul>
+        </div>
+        <div class="wrapper">
+            <h2> <%= @title %></h2>
+            <div class="variable">
+                <%= yield %>
+            </div>
+        </div>
+    </body>
+</html>
