@@ -10,7 +10,7 @@ gem "dm-core"
 
 gem "dm-migrations"
 
-gem "data_mapper"
+gem "dm-timestamps"
 
 gem "thin"
 
