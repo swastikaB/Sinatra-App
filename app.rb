@@ -20,7 +20,7 @@ configure :development, :test do
 end
 
 configure :production do 
-    DataMapper.setup(:default,ENV['DATABASE_URL'])
+    DataMapper.setup(:default,ENV['DATABASE_URL']  || 'postgres://user:password@hostname/data/mydatabase.db')
 end
 
 
