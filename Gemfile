@@ -1,8 +1,7 @@
-source "https://rubygems.org"
+source 'http://rubygems.org'
 ruby "2.2.6"
 gem "sinatra"
 gem "sass"
-gem "erb"
 gem "dm-core"
 gem "dm-migrations"
 gem "thin"
