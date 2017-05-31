@@ -4,7 +4,7 @@ require './comment'
 
 configure do
     #set :environment, :development
-    #set :port, 4567
+    set :port, 9494
     set :username, "Swastika"
     set :password, "Password"
     set :logged_in, false

@@ -6,9 +6,9 @@ gem "slim"
 
 gem "sass"
 
-#gem "dm-core"
+gem "dm-core"
 
-#gem "dm-migrations"
+gem "dm-migrations"
 
 gem "data_mapper"
 
