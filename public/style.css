@@ -98,11 +98,18 @@ div.wrapper{
 }
 h2{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 div.variable{
   
   justify-content: flex-start;
   display: grid;
 
+}
+
+
+table.infoTable {
+    width: 400px;
+    justify-content: center;
+    display: flex;
 }

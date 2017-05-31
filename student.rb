@@ -3,10 +3,8 @@ require 'dm-migrations'
 
 
 
-DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
-#DataMapper::Model.raise_on_save_failure = true
-#Student.raise_on_save_failure = true
-#student.raise_on_save_failure = true
+#DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
+
 class Student
     include DataMapper::Resource
     property :id, Serial
@@ -16,8 +14,27 @@ class Student
     property :address, Text
 
     def dob=date
-        super Date.strptime(date, '%m/%d/%Y')
+        if(!date.empty?)
+            begin 
+                super Date.strptime(date, '%m/%d/%Y')
+                #super Date.strptime(date, '%Y-%m-%d')
+            rescue
+                #settings.message = "Enter correct date"
+                
+                redirect to('/students/create')
+            end
+            
+        end
     end
+
+    def first_name= first_name
+        super first_name.capitalize
+    end
+
+    def last_name= last_name
+        super last_name.capitalize
+    end
+    
 end
 
 DataMapper.finalize
@@ -55,6 +72,7 @@ get '/students/create' do
 end
 
 post '/students/create' do
+
     student = Student.create(params[:student])
     redirect to("/students")
 end

@@ -11,6 +11,7 @@ class Comment
     property :name, String
     property :description, Text
     property :created_at, DateTime
+    
 end
 
 DataMapper.finalize

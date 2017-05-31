@@ -8,7 +8,7 @@
             <% if(@readonly) %>
             <label> <%= @student.first_name%> </label>
             <% else %>
-            <input type="text" width="25" name="student[first_name]" value="<%= @student.first_name %>" maxlength="25" >
+            <input type="text" width="25" id="fname" name="student[first_name]" value="<%= @student.first_name %>" maxlength="25" >
             <% end %>
         </td>
     </tr>
@@ -33,7 +33,7 @@
             <% if(@readonly) %>
             <label> <%= dobString %> </label>
             <% else %>
-            <input type="text" width="25" name="student[dob]" value="<%= dobString %>">
+            <input type="text" id="dob"  width="25" name="student[dob]" value="<%= dobString %>">
             <% end %>
         </td>
     </tr>

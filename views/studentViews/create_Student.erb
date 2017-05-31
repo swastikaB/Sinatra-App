@@ -1,4 +1,6 @@
- <form method="POST" action="/students/create">
+ <form method="POST" action="/students/create" onSubmit="return validateStudentForm();">
+    <p id="errorMessage"></p>
     <%= erb :'studentViews/student_form' %>
-    <input type="submit" value="Submit">
+    <br>
+    <input class="button" type="submit" value="Submit">
  </form>
