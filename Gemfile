@@ -1,11 +1,21 @@
-source 'http://rubygems.org'
-ruby "2.2.6"
+source :rubygems
+
 gem "sinatra"
+
+gem "slim"
+
 gem "sass"
+
 #gem "dm-core"
+
 #gem "dm-migrations"
-gem "thin"
-gem "pg"
+
 gem "data_mapper"
+
+gem "thin"
+
+gem "pg", :group => :production
+
 gem "dm-postgres-adapter"
+
 gem "dm-sqlite-adapter", :group => :development

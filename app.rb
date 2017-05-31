@@ -3,7 +3,7 @@ require './student'
 require './comment'
 
 configure do
-    set :environment, :development
+    #set :environment, :development
     #set :port, 4567
     set :username, "Swastika"
     set :password, "Password"
@@ -15,7 +15,7 @@ configure do
     #Currently used to display error messages while login
     set :message, ""
 end
-configure :development, :test do
+configure :development do
     DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
 end
 
