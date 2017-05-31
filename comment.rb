@@ -2,7 +2,7 @@ require 'dm-core'
 require 'dm-migrations'
 require 'dm-timestamps'
 
-DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
+#DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
 
 class Comment
     include DataMapper::Resource
